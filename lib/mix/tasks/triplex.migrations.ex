@@ -47,7 +47,7 @@ defmodule Mix.Tasks.Triplex.Migrations do
         migration_lists = migrations.(repo, Triplex.migrations_path(repo))
         tenants_state = tenants_state(repo, migration_lists)
 
-        pid && repo.stop(pid)
+        pid && repo.stop()
 
         tenants_state
       end)
